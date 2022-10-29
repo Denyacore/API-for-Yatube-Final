@@ -1,4 +1,3 @@
-from requests import request
 from rest_framework import serializers
 from rest_framework.validators import UniqueTogetherValidator
 from posts.models import Post, Group, Comment, Follow, User
