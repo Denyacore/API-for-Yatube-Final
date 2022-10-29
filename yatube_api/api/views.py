@@ -1,15 +1,14 @@
 from rest_framework import viewsets
+from rest_framework import mixins
 from django.shortcuts import get_object_or_404
 
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.permissions import IsAuthenticated
-
-
 from rest_framework.filters import SearchFilter
+
 from django_filters.rest_framework import DjangoFilterBackend
 from posts.models import Post, Group
 from .permissions import IsAuthorOrReadOnly
-
 from .serializers import (PostSerializer,
                           GroupSerializer,
                           CommentSerializer,
@@ -37,15 +36,16 @@ class CommentViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         post = get_object_or_404(Post, id=self.kwargs['post_id'])
-        comments_queryset = post.comments.select_related('author')
-        return comments_queryset
+        return post.comments.select_related('author')
 
     def perform_create(self, serializer):
         post = get_object_or_404(Post, pk=self.kwargs.get('post_id'))
         serializer.save(author=self.request.user, post=post)
 
 
-class FollowViewSet(viewsets.ModelViewSet):
+class FollowViewSet(mixins.CreateModelMixin,
+                    mixins.ListModelMixin,
+                    viewsets.GenericViewSet):
     serializer_class = FollowSerializer
     permission_classes = (IsAuthenticated,)
     filter_backends = (DjangoFilterBackend, SearchFilter)
