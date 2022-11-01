@@ -52,7 +52,7 @@ py -m venv venv
 ```
 
 ```
-source env/bin/activate
+source venv/Scripts/activate
 ```
 
 ```
