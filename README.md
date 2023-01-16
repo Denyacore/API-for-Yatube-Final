@@ -95,6 +95,6 @@ GET http://127.0.0.1:8000/api/v1/follow/
 ```
 ## Acknowledgements
 :pray: :pray: :pray:
- - [Dmitry Lifanov ](https://github.com/Dimalright/api_yatube) for your patience :heart:
+ - [Dmitry Lifanov ](https://github.com/Dimalright) for your patience :heart:
  - [Sergey Efanov]() for the ability to explain :books:
  - [Maxim Mityagin]() for for the transfer of experience :sunglasses:
