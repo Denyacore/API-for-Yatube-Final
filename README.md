@@ -31,8 +31,6 @@
 
 To deploy this project run
 
-### How to launch a project:
-
 Clone the repository and go to it on the command line:
 
 ```
