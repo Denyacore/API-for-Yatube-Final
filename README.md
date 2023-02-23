@@ -1,4 +1,4 @@
-# API for Yatube by [Denyacore](https://github.com/Denyacore)
+# API for [Yatube](https://github.com/Denyacore/hw05_final) by [Denyacore](https://github.com/Denyacore)
 
 Проект для продвинутых и современных блогеров без границ, 
 которые не хотят зацикливаться на одном устройстве, в желании поделиться своими мыслями с миром!
