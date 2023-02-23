@@ -21,12 +21,6 @@
 
 **Server:** Django 2.2.16
 
-
-## Authors
-
-- [Denyacore](https://github.com/Denyacore)
-
-
 ## Deployment
 
 To deploy this project run
